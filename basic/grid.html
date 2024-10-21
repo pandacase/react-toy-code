@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Demo</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr; /* 创建3列，宽度相等 */
+            gap: 20px 10px;
+            height: 20vh;
+            padding: 10px;
+        }
+        @keyframes example {
+          from {background-color: red;}
+          to {background-color: yellow;}
+        }
+
+        .box {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          animation: example 3s infinite;
+          
+          /* display: flex;
+          justify-content: center;
+          align-items: center; */
+          
+          display: grid;
+          place-items: center;
+
+          /* line-height: 100px;
+          text-align: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>
