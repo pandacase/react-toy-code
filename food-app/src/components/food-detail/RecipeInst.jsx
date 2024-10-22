@@ -1,6 +1,6 @@
 import styles from "./recipeinst.module.css"
 
-export default function RecipeInst() {
+export default function RecipeInst({ isLoaded, food }) {
   return (
     <div className={styles.recipeInst}>
       <ol>
