@@ -1,3 +1,4 @@
+import CntReducer from "./components/CntReducer";
 import Counter from "./components/Counter";
 import Form from "./components/Form";
 import Fruits from "./components/Fruits";
@@ -17,9 +18,9 @@ function App() {
       {/* <Fruits /> */}
 
       
-      {/* <Counter /> */}
+      <CntReducer />
 
-      <Form />
+      {/* <Form /> */}
     </div>
   );
 }
