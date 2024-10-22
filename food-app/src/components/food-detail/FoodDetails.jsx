@@ -3,7 +3,7 @@ import styles from "./fooddetails.module.css";
 import IngreList from "./IngreList";
 
 const URL = "https://api.spoonacular.com/recipes";
-const API_KEY = "d02ad6f77cd148938f7fafda6b615f58";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export default function FoodDetails({ foodId }) {
   const [food, setFood] = useState({});
@@ -17,7 +17,7 @@ export default function FoodDetails({ foodId }) {
       setFood(data);
       setIsLoaded(true);
       console.log(data);
-    }); //TODO call it
+    })(); //TODO call it
   }, [foodId]);
   return (
     <div>
