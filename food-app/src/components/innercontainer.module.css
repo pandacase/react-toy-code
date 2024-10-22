@@ -1,4 +1,6 @@
 .innerContainer {
-  flex-flow: 1;
+  flex: 1;
   background-color: bisque;
+  padding: 10px;
+  margin: 10px;
 }
