@@ -14,7 +14,7 @@ export default function Search({ foodData, setFoodData }) {
       );
       const data = await res.json();
       setFoodData(data.results);
-    })(); //TODO call it
+    })();
   }, [query]);
   return (
     <div className={styles.searchContainer}>
