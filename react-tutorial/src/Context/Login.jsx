@@ -4,10 +4,10 @@ import { UserCtx } from "./UserProvider";
 export default function Login() {
   const [name, setName] = useState("");
   {/* 更推荐使用更简洁的 useContext Hook */}
-  const { setUser } = useContext(UserCtx);
+  const { dispatchUser } = useContext(UserCtx);
   function handleSubmit(e) {
     e.preventDefault();
-    setUser(name);
+    dispatchUser({ type: "login", payload: name });
   }
   return (
     <div>
