@@ -6,6 +6,7 @@ import {
   Outlet,
   useParams,
   useNavigate,
+  useLocation,
 } from "react-router-dom";
 import styles from "./youtube.module.css";
 
@@ -21,7 +22,9 @@ function Nav() {
 function Homepage() {
   const navigate = useNavigate();
   function handleClick() {
-    navigate("/dashboard/Settings");
+    navigate("/dashboard/Settings", {
+      state: { message: "From HomePage" },
+    });
   }
   return (
     <div>
@@ -58,9 +61,11 @@ function Profile() {
 }
 
 function Settings() {
+  const location = useLocation();
+  const { message } = location.state || {};
   return (
     <div>
-      <div>Settings Page</div>
+      <div>Settings Page {message}</div>
       <div className={styles.topNav}>
         <Link to="dev">Dev</Link>
         <Link to="ops">Ops</Link>
