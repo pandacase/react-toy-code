@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { UserCtx } from "./Ctx";
+import { UserCtx } from "./UserProvider";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -17,7 +17,7 @@ export default function Login() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <button type="submit">OK</button>
+        <button type="submit">Log in</button>
       </form>
     </div>
   );

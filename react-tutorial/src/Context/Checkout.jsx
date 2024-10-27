@@ -1,4 +1,4 @@
-import { UserCtx } from "./Ctx";
+import { UserCtx } from "./UserProvider";
 
 export default function Checkout() {
   return (
