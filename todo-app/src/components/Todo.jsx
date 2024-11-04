@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from "./Form";
 import TodoList from "./TodoList";
 import Stats from "./Stats";
 
 export default function Todo() {
-  const [todos, setTodos] = useState([]);
+  const initialToods =
+    JSON.parse(localStorage.getItem("todos")) || [];
+
+  const [todos, setTodos] = useState(initialToods);
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
   const doneNum = todos.filter((todo) => todo.done).length;
   const totalNum = todos.length;
   return (
